@@ -53,8 +53,8 @@ export default function Cart(){
                                 }
 
                                 <tr>
-                                    <td>مجموع</td>
-                                    <td>{enTofa(totalPrice) }</td>
+                                    <td> <strong>مجموع</strong></td>
+                                    <td><strong>{enTofa(totalPrice) }</strong></td>
                                 </tr>
                             </tbody>
                         </table>
