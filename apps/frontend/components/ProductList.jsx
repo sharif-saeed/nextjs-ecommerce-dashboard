@@ -6,7 +6,7 @@ export default function ProductList({products}){
             {
                 products.length > 0 &&
                 products.map(
-                    (product)=> <ProductBox product={product} key={product.id}/>
+                    (product)=> <ProductBox product={product} key={product._id}/>
                 )
              }
         </div>
