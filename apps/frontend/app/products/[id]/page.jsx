@@ -1,4 +1,5 @@
 import { enTofa } from "@/utils/Utilities";
+import Link from "next/link";
 
 
 export default async function ProductDetail({params}){
@@ -16,6 +17,9 @@ export default async function ProductDetail({params}){
 
                 <div className="new-product-info">
                     <h1 className="new-product-title">{mainProduct.title}</h1>
+                    <span>دسته بندی: </span>
+                    <Link href={`/products?category=${mainProduct.category}`}>{mainProduct.category}</Link>
+                    <br/><br/>
                     <p className="new-product-description">{mainProduct.description}</p>
                     <div className="product-price-row">
                         <div className="product-price">{enTofa(mainProduct.price) }</div>
