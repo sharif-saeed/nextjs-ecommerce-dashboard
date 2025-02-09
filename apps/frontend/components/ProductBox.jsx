@@ -1,8 +1,15 @@
+"use client"
+
+import { CartContext } from "@/contexts/CartContext";
 import { enTofa } from "@/utils/Utilities";
 import Image from "next/image";
 import Link from "next/link";
+import { useContext } from "react";
 
 export default function ProductBox({product}){
+
+    let {addToCart} = useContext(CartContext)
+
     return(
         <div className="product-wrapper">
             <Link href={`/products/${product._id}`} >
@@ -16,7 +23,7 @@ export default function ProductBox({product}){
                     <div className="product-title">{product.title}</div>
                 </Link>
                 <div className="product-price-row">
-                    <button className="product-button">افزودن به سبد خرید</button>
+                    <button onClick={ ()=>addToCart(product) } className="product-button">افزودن به سبد خرید</button>
                     <div className="product-price">{enTofa(product.price) }</div>
                 </div>
             </div>

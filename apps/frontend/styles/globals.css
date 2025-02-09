@@ -577,3 +577,33 @@
   background: gray;
   cursor: not-allowed;
 }
+
+/* //////////////////////// */
+
+
+.cart-product input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.cart-product button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.cart-product button svg {
+  width: 18px;
+  height: 18px;
+  fill: #f44336; 
+}
+
+.cart-product button:hover svg {
+  fill: #d32f2f;  
+}
