@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { FiEdit, FiTrash2 } from "react-icons/fi"
 
 export default async function Products(){
@@ -7,7 +8,9 @@ export default async function Products(){
   return(
     <div>
       <h1>This is product page</h1>
-      <button>Add new product</button>
+      <Link href="/products/new">
+        <button>Add new product</button>
+      </Link>
 
       <table>
         <thead>
