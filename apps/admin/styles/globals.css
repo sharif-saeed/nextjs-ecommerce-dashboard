@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #1e293b;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.link svg {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.link:hover {
+  background-color: #334155;
+}
+
+.active {
+  background-color: #475569;
+}
+
+main {
+  margin-left: 300px;
+  padding: 20px;
+  width: calc(100% - 250px);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+    padding: 10px;
+  }
+
+  .link span {
+    display: none;
+  }
+
+  .link {
+    justify-content: center;
+  }
+
+  main {
+    margin-left: 80px;
+    width: calc(100% - 60px);
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+button {
+  background-color: #1771ff;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #145ac2; 
+}
+
+ svg {
+  font-size: 20px; 
+  cursor: pointer;
+  padding: 5px;
+}
+
+svg:hover {
+  color: #145ac2;
+}
+
+form {
+  width: 300px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
