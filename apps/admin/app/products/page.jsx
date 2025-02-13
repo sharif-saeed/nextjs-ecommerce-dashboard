@@ -26,8 +26,8 @@ export default async function Products(){
               <tr key={product._id}>
                 <td>{product.title}</td>
                 <td>
-                  <FiEdit/>
-                  <FiTrash2/>
+                  <Link href={`products/edit/${product._id}`}><FiEdit/></Link>
+                  <Link href={`products/delete/${product._id}`}><FiTrash2/></Link>
                 </td>
               </tr>
             ))
