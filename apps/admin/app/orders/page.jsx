@@ -1,6 +1,6 @@
 export default async function Orders() {
 
-  const res = await fetch(`${process.env.PUBLIC_URL}/api/orders`)
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders`)
   const orders = await res.json()
 
     return (
