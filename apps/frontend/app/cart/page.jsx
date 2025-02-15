@@ -34,11 +34,11 @@ export default function Cart(){
         }
 
         try{
-           const res = await fetch("http://localhost:3000/api/orders", {
-            method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify(orderData)
-           })
+            const res = await fetch(`/api/orders`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(orderData),
+            })
            if(res.ok){
             alert("سفارش شما ثبت شد")
             clearCart()

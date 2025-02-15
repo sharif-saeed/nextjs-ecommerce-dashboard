@@ -5,8 +5,8 @@ export default async function LatestProducts({searchParams}){
     const category = searchParams?.category
 
     const url = category ? 
-    `http://localhost:3000/api/products?category=${category}`:
-    "http://localhost:3000/api/products"
+    `${process.env.PUBLIC_URL}/api/products?category=${category}`:
+    `${process.env.PUBLIC_URL}/api/products`
 
     const res = await fetch(url)
     const products = await res.json()

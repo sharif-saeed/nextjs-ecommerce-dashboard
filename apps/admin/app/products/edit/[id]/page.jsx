@@ -19,7 +19,7 @@ export default function EditProduct(){
     useEffect(
            ()=>{
             async function fetchProduct(){
-                const res = await fetch(`http://localhost:3001/api/products/${id}`)
+                const res = await fetch(`/api/products/${id}`)
                 const data = await res.json()
                 setFormData(data.product)
             }
@@ -33,7 +33,7 @@ export default function EditProduct(){
 
     async function handleSumbit(e){
             e.preventDefault()
-            const res = await fetch(`http://localhost:3001/api/products/${id}`,{
+            const res = await fetch(`/api/products/${id}`,{
                 method:"PUT",
                 headers:{"content-type":"application/json"},
                 body: JSON.stringify(formData)

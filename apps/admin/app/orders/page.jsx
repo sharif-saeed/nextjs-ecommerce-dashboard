@@ -1,6 +1,6 @@
 export default async function Orders() {
 
-  const res = await fetch("http://localhost:3001/api/orders")
+  const res = await fetch(`${process.env.PUBLIC_URL}/api/orders`)
   const orders = await res.json()
 
     return (

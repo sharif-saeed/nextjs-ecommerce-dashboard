@@ -22,7 +22,7 @@ export default function NewProduct(){
     async function handleSubmit(e){
         e.preventDefault()
 
-        const res = await fetch("http://localhost:3001/api/products",{
+        const res = await fetch("/api/products",{
             method: "POST",
             headers: {"content-type": "application/json"},
             body: JSON.stringify(formData)
