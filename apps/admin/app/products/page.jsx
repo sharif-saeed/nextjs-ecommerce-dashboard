@@ -2,7 +2,7 @@ import Link from "next/link"
 import { FiEdit, FiTrash2 } from "react-icons/fi"
 
 export default async function Products(){
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products`)
+  const res = await fetch(`${process.env.API_URL}/api/products`) //API_URL = http://localhost:3001 (.env.local)
   const products = await res.json()
 
   return(

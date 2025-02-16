@@ -1,6 +1,6 @@
 export default async function Orders() {
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders`)
+  const res = await fetch(`${process.env.API_URL}/api/orders`) //API_URL = http://localhost:3001 (.env.local)
   const orders = await res.json()
 
     return (
